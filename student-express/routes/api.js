@@ -33,6 +33,7 @@ router.post('/students', function(req, res, next){
 router.patch('/students/:id', function(req, res, next){
   Student.update(req.body, {where: { id: req.params.id }})
     .then(rowsModified => {
+      return res.send(rowsModified)
       if (rowsModified[0]) {
         return res.status(404).send("Not found")
       }
