@@ -5,14 +5,8 @@ let Sequelize = require('sequelize')
 let Student = db.Student
 let router = express.Router()
 
-
-router.get('/', function(req, res, next){
-    return res.json({"success":"true"})
-})
-
-
 router.get('/students', function(req, res, next){
-  Student.findAll({ order:['name'] }).then(students => {
+  Student.findAll({ order:['starId'] }).then(students => {
     return res.json(students)
   }).catch(err => next(err))
 })
