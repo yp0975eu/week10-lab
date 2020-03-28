@@ -7,13 +7,9 @@ let app = express()
 
 app.use(bodyParser.json())
 
-app.use(express.static(path.join(__dirname, 'student-sign-in-client', 'dist')))
+app.use(express.static(path.join(__dirname, '../student-sign-in-client', 'dist')))
 
 app.use('/api', apiRoutes)
-
-app.get('/', function (req, res, next) {
-  res.send({'hello': 'there'})
-})
 
 app.use(function(req, res, next) {
   res.status(404).send('Not Found')
