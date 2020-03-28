@@ -42,6 +42,7 @@ export default {
   },
   methods: {
     updateStudents: function() {
+      // request all students and then update data array
       this.$studentApi
         .getAllStudents()
         .then(students => (this.students = students))

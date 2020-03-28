@@ -1,7 +1,10 @@
 import axios from 'axios'
 
 const baseUrl = '/api/students'
-
+/**
+ * Send XHR requests to baseUrl
+ * get, add, update and delete
+ */
 function getAllStudents() {
   return axios.request(baseUrl).then(res => res.data)
 }

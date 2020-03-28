@@ -8,8 +8,9 @@ Vue.use(BootstrapVue)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+// attache api to Vue prototype for usage in templates
 Vue.prototype.$studentApi = StudentServices
-
+/// hide production tip duting startup
 Vue.config.productionTip = false
 
 new Vue({
