@@ -2,7 +2,7 @@
   "name": "week10-lab",
   "version": "1.0.0",
   "description": "lab 10 project",
-  "main": "index.js",
+  "main": "./student-express/server.js",
   "scripts": {
     "start": "node ./student-express/server.js"
   },
@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/yp0975eu/week10-lab/issues"
   },
-  "homepage": "https://github.com/yp0975eu/week10-lab#readme"
+  "homepage": "https://github.com/yp0975eu/week10-lab#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.18.2",
+    "sequelize": "^5.21.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sqlite3": "^4.1.1"
+  }
 }
