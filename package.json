@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "lab 10 project",
   "main": "index.js",
+  "scripts": {
+    "start": "node ./student-express/server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yp0975eu/week10-lab.git"
