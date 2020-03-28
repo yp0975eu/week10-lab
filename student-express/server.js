@@ -1,10 +1,13 @@
 let express = require('express')
 let bodyParser = require('body-parser')
 let apiRoutes = require('./routes/api.js')
+let path = require('path')
 
 let app = express()
 
 app.use(bodyParser.json())
+
+app.use(express.static(path.join(__dirname, 'student-sign-in-client', 'dist')))
 
 app.use('/api', apiRoutes)
 
